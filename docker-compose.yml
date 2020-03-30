@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  minecraft:
+    image: felixklauke/paperspigot:1.15.2
+    container_name: minecraft
+    stdin_open: true
+    tty: true
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    restart: always
+    networks:
+      - default
+      - minecraft
+    ports:
+      - 25565:25565
+    environment:
+      - JAVA_HEAP_SIZE=2G
+    volumes:
+      - /opt/data/mincraft/config:/opt/minecraft/config
+      - /opt/data/mincraft/worlds:/opt/minecraft/worlds
+      - /opt/data/mincraft/plugins:/opt/minecraft/plugins
+      - /opt/data/mincraft/data:/opt/minecraft/data
+      - /opt/data/mincraft/logs:/opt/minecraft/logs
+
+networks:
+  minecraft:
+    external: true
