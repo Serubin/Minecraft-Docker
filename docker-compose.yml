@@ -24,7 +24,7 @@ services:
       - /opt/data/minecraft/plugins:/opt/minecraft/plugins
       - /opt/data/minecraft/data:/opt/minecraft/data
       - /opt/data/minecraft/logs:/opt/minecraft/logs
-      - /opt/data/minecraft/server-icon.png:/opt/minecraft/server-icon.png
+      - /opt/data/minecraft/server-icon.png:/opt/minecraft/server/server-icon.png
 
 networks:
   minecraft:
