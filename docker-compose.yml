@@ -19,11 +19,11 @@ services:
     environment:
       - JAVA_HEAP_SIZE=2G
     volumes:
-      - /opt/data/mincraft/config:/opt/minecraft/config
-      - /opt/data/mincraft/worlds:/opt/minecraft/worlds
-      - /opt/data/mincraft/plugins:/opt/minecraft/plugins
-      - /opt/data/mincraft/data:/opt/minecraft/data
-      - /opt/data/mincraft/logs:/opt/minecraft/logs
+      - /opt/data/minecraft/config:/opt/minecraft/config
+      - /opt/data/minecraft/worlds:/opt/minecraft/worlds
+      - /opt/data/minecraft/plugins:/opt/minecraft/plugins
+      - /opt/data/minecraft/data:/opt/minecraft/data
+      - /opt/data/minecraft/logs:/opt/minecraft/logs
 
 networks:
   minecraft:
