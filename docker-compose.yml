@@ -17,7 +17,7 @@ services:
     ports:
       - 25565:25565
     environment:
-      - JAVA_HEAP_SIZE=2G
+      - JAVA_HEAP_SIZE=4G
     volumes:
       - /opt/data/minecraft/config:/opt/minecraft/config
       - /opt/data/minecraft/worlds:/opt/minecraft/worlds
