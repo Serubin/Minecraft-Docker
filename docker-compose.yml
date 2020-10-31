@@ -10,6 +10,9 @@ services:
       replicas: 1
       restart_policy:
         condition: on-failure
+      resources:
+        limits:
+          memory: 4096M
     restart: always
     networks:
       - default
@@ -17,7 +20,7 @@ services:
     ports:
       - 25565:25565
     environment:
-      - JAVA_HEAP_SIZE=4G
+      - JAVA_HEAP_SIZE=3584M
     volumes:
       - /opt/data/minecraft/config:/opt/minecraft/config
       - /opt/data/minecraft/worlds:/opt/minecraft/worlds
